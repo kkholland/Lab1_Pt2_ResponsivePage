@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Universal Styles */
+body{
+    background-color: #F9FAFC;
+    padding: 10px 20px;
+}
+
+a:link{
+    text-decoration: none;
+    color: #69696A;
+}
+
+a:visited{
+    color: #69696A;
+}
+
+a:hover{
+    font-weight: 600;
+}
+
+a:active{
+    color: #000;
+}
+
+button{
+    width: 100%;
+    background-color: #000;
+    color: #FFF;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+h1{
+    font-weight: 600;
+}
+
+/* Header */
+header{
+    margin: 10px 0;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    margin: 10px 0;
+}
+
+/* Main Section*/
+main{
+    margin-top: 40px;
+}
+
+main p {
+    padding-left: 15px;
+    border-left: 3px solid #69696A;
+    color: #69696A;
+    margin: 20px 0 30px 0;
+}
+
+.circles{
+    display: none;
+}
+
+
+/* Desktop Styles ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media only screen and (min-width: 768px) {
+
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Make buttons not full page width*/
+    button{
+        width: auto;
+        padding: 0 20px;
+    }
+
+    /* Header to row on desktop*/
+    header{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {
+        align-items: center;
+    }
+    
+    nav li{
+        display: inline-block;
+        padding: 0 5px;
+    }
+
+    nav button{
+        margin-left: 10px;
+    }
+
+    /* Adjust main margins to add space from header*/
+    main{
+        margin-top: 150px;
+    }
+
+    /* Make Lipsum section half size page*/
+    .textblock{
+        width: 50%;
+    }
+
+    /* Send Scroll down button to bottom of page */
+    main button{
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Circle Styling */
+    /* Change display to make circles viewable, set height and position so can align cicles w/in box*/
+    .circles{
+        width: 50%;
+        display: block;
+        position: relative;
+        height: 350px;
+    }
+
+    #circle-pink{
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        background-color: rgba(247, 136, 167, 0.6);
+        border-radius: 150%;
+        right: 0;
+        transform: translateX(-30%);
+    }
+    #circle-orange{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: rgba(247, 193, 162, 0.7);
+        border-radius: 150%;
+        bottom: 0;
+        right: 0;
+    }
+    #circle-purple{
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-color: rgba(207, 130, 213, 0.6);
+        border-radius: 150%;
+        right: 0;
+        transform: translateY(30%);
+    }
+
+
+}
